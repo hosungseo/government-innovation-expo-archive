@@ -1,0 +1,86 @@
+:root {
+  /* Primitive palette */
+  --primitive-navy-950: #062d42;
+  --primitive-navy-900: #063b56;
+  --primitive-blue-700: #005ea8;
+  --primitive-blue-100: #e8f2f8;
+  --primitive-cyan-400: #55d5d0;
+  --primitive-lime-400: #c4e84d;
+  --primitive-lime-300: #d1ef62;
+  --primitive-paper: #fbfcfd;
+  --primitive-white: #ffffff;
+  --primitive-slate-900: #10243a;
+  --primitive-slate-600: #576779;
+  --primitive-slate-300: #b8c7cf;
+  --primitive-slate-200: #dbe4e9;
+  --primitive-slate-100: #eff6f8;
+  --primitive-focus: #ffbf47;
+
+  /* Semantic color roles */
+  --surface-page: var(--primitive-paper);
+  --surface-subtle: var(--primitive-slate-100);
+  --surface-inverse: var(--primitive-navy-950);
+  --surface-brand: var(--primitive-navy-900);
+  --text-primary: var(--primitive-slate-900);
+  --text-secondary: var(--primitive-slate-600);
+  --text-inverse: var(--primitive-white);
+  --text-on-action: var(--primitive-navy-950);
+  --border-subtle: var(--primitive-slate-200);
+  --border-strong: var(--primitive-slate-900);
+  --brand-primary: var(--primitive-blue-700);
+  --brand-secondary: var(--primitive-cyan-400);
+  --action-primary: var(--primitive-lime-400);
+  --action-primary-hover: var(--primitive-lime-300);
+  --focus-ring: var(--primitive-focus);
+
+  /* Typography */
+  --font-sans: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --tracking-display: -0.075em;
+  --tracking-heading: -0.065em;
+  --tracking-body: -0.035em;
+  --measure-copy: 42rem;
+
+  /* Spacing and geometry */
+  --space-section: clamp(5rem, 9vw, 8rem);
+  --container-wide: 1180px;
+  --radius-control: 3px;
+  --line-hairline: 1px;
+
+  /* Motion: one "Silk" vocabulary across the product */
+  --duration-fast: 160ms;
+  --duration-standard: 220ms;
+  --duration-reveal: 560ms;
+  --ease-silk: cubic-bezier(.16, 1, .3, 1);
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+
+  /* Backward-compatible aliases used by the existing stylesheet */
+  --ink: var(--text-primary);
+  --muted: var(--text-secondary);
+  --blue: var(--brand-primary);
+  --blue-deep: var(--primitive-navy-900);
+  --aqua: var(--brand-secondary);
+  --lime: var(--action-primary);
+  --paper: var(--surface-page);
+  --tint: var(--surface-subtle);
+  --line: var(--border-subtle);
+}
+
+@supports (color: oklch(50% 0.1 200)) {
+  :root {
+    --primitive-navy-950: oklch(27% 0.055 235);
+    --primitive-navy-900: oklch(34% 0.068 230);
+    --primitive-blue-700: oklch(49% 0.15 247);
+    --primitive-blue-100: oklch(95% 0.025 235);
+    --primitive-cyan-400: oklch(78% 0.105 190);
+    --primitive-lime-400: oklch(87% 0.16 118);
+    --primitive-lime-300: oklch(90% 0.15 118);
+    --primitive-paper: oklch(99% 0.003 240);
+    --primitive-slate-900: oklch(28% 0.045 250);
+    --primitive-slate-600: oklch(50% 0.035 245);
+    --primitive-slate-300: oklch(78% 0.025 230);
+    --primitive-slate-200: oklch(89% 0.018 230);
+    --primitive-slate-100: oklch(96% 0.015 220);
+  }
+}
