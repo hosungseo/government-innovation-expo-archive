@@ -589,3 +589,39 @@ h1 em {
 @media (prefers-reduced-motion: reduce) {
   .fit-list li, .example-card { transition-delay: 0s; }
 }
+
+/* Bold pass (2026-08-02): split hero — full-height photo column */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) min(44vw, 640px); min-height: 730px; }
+.hero::after { content: none; }
+.hero-inner { position: relative; z-index: 2; display: block; width: auto; min-height: 0; padding: 165px 56px 72px max(24px, calc((100vw - 1180px) / 2)); }
+.hero-copy { max-width: 560px; }
+.hero .deadline-card { margin: 52px 0 0; }
+.hero-media { position: relative; grid-column: 2; display: flex; flex-direction: column; gap: 2px; margin: 107px 0 0; background: #03163a; }
+.hero-media img { flex: 1 1 0; min-height: 0; width: 100%; object-fit: cover; display: block; }
+.hero-media figcaption { position: absolute; left: 0; bottom: 0; padding: 8px 14px; background: #03163ad9; color: #cfdcf5; font-size: 12px; letter-spacing: -.02em; }
+.hero-bottom { grid-column: 1 / -1; }
+
+@media (min-width: 1181px) {
+  .hero .deadline-card { position: relative; z-index: 3; margin-left: auto; margin-right: -104px; }
+}
+
+@media (max-width: 840px) {
+  .hero { display: block; min-height: 0; }
+  .hero-inner { padding: 130px 24px 40px; }
+  .hero .deadline-card { width: 100%; margin: 34px 0 0; }
+  .hero-media { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2px; margin: 0; }
+  .hero-media img { height: 150px; }
+  .hero-media figcaption { position: static; grid-column: 1 / -1; padding: 10px 24px 14px; background: none; color: #abc0e7; }
+}
+
+/* Bold pass: archive as a timeline spine */
+.archive-record article { grid-template-columns: 150px 1fr; position: relative; }
+.archive-record article::before { content: ""; position: absolute; top: 0; bottom: 0; left: 118px; width: 1px; background: var(--line); }
+.archive-record article::after { content: ""; position: absolute; top: 36px; left: 111px; width: 11px; height: 11px; border: 3px solid var(--blue); border-radius: 50%; background: #fff; }
+.archive-year { font-size: 40px; font-weight: 750; line-height: 1; letter-spacing: -.05em; }
+.archive-record:hover article::after { background: var(--blue); }
+
+@media (max-width: 840px) {
+  .archive-record article::before, .archive-record article::after { content: none; }
+  .archive-year { font-size: 28px; }
+}
