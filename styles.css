@@ -555,3 +555,13 @@ h1 em {
 @media (max-width: 840px) {
   .archive-photos { grid-column: 1; grid-template-columns: 1fr 1fr; }
 }
+
+/* Hero: last year's on-site photo band */
+.hero-photos { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 0 auto; }
+.hero-photos img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero-photos figcaption { grid-column: 1 / -1; padding: 12px 0 18px; color: #abc0e7; font-size: 12px; letter-spacing: -.02em; }
+
+@media (max-width: 840px) {
+  .hero-photos { grid-template-columns: 1fr 1fr; }
+  .hero-photos img:nth-of-type(3) { display: none; }
+}
