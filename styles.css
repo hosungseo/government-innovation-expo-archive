@@ -556,12 +556,36 @@ h1 em {
   .archive-photos { grid-column: 1; grid-template-columns: 1fr 1fr; }
 }
 
-/* Hero: last year's on-site photo band */
-.hero-photos { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 0 auto; }
-.hero-photos img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.hero-photos figcaption { grid-column: 1 / -1; padding: 12px 0 18px; color: #abc0e7; font-size: 12px; letter-spacing: -.02em; }
+/* Hero: last year's on-site photo band — asymmetric editorial strip */
+.hero-photos { position: relative; z-index: 1; display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2px; margin: 0 auto; }
+.hero-photos img { display: block; width: 100%; height: 236px; object-fit: cover; }
+.hero-photos figcaption { grid-column: 1 / -1; padding: 12px 0 18px; color: #abc0e7; font-size: 12px; letter-spacing: -.02em; text-align: right; }
 
 @media (max-width: 840px) {
-  .hero-photos { grid-template-columns: 1fr 1fr; }
+  .hero-photos { grid-template-columns: 1.3fr 1fr; }
+  .hero-photos img { height: 148px; }
   .hero-photos img:nth-of-type(3) { display: none; }
+  .hero-photos figcaption { text-align: left; }
+}
+
+
+/* Design refinement pass (2026-08-02) */
+.section-heading h2::before,
+.schedule-intro h2::before,
+.contact .title-lockup h2::before { content: ""; display: block; width: 44px; height: 3px; margin-bottom: 24px; background: var(--blue); }
+.section-dark h2::before { background: var(--sky); }
+
+.section-heading h2, .schedule-intro h2, .contact .title-lockup h2,
+.fit-list h3, .example-card h3, .archive-content h3 { text-wrap: balance; }
+
+.fit-list li:nth-child(2), .example-card:nth-child(2) { transition-delay: .09s; }
+.fit-list li:nth-child(3), .example-card:nth-child(3) { transition-delay: .18s; }
+
+.deadline-card { border-top: 2px solid var(--sky); }
+
+.archive-photos img { transition: filter var(--duration-standard) ease; }
+.archive-photos img:hover { filter: brightness(1.07); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fit-list li, .example-card { transition-delay: 0s; }
 }

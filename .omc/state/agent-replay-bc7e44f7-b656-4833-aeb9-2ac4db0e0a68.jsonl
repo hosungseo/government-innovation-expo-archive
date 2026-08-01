@@ -52,3 +52,5 @@
 {"t":0,"agent":"ae1c6ff","agent_type":"unknown","event":"agent_stop","success":true}
 {"t":0,"agent":"a407caf","agent_type":"unknown","event":"agent_stop","success":true}
 {"t":0,"agent":"a4b759f","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"ad38d04","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"frontend-design:frontend-design"}
