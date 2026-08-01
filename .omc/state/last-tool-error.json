@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"curl -skL --max-time 30 -A \\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36\\\" \\\"https://govexpo.kr/faq/\\\" | python3 -c \\\"\\n...",
-  "error": "Exit code 7\n2024 대한민국 정부박람회 | 자주 묻는 질문 (FAQ): 관람 안내 및 프로그램 정보\n콘텐츠로 건너뛰기\n2024 대한민국 정부박람회\n모두싸인, 대한민국 정부박람회에서 공공 혁신의 미래를\nFAQ\nMain Menu\n2024 대한민국 정부박람회: 자주 묻는 질문 (FAQ) 2024 대한민국 정부박람회: 혁신과 소통으로 국민의 삶을 바꾸다 모두싸인, 2024 대한민국 정부박람회에서 공공 행정 혁신의 미래를 만나다\n2024 대한민국 정부박람회: 자주 묻는 질문 (FAQ)\n2024 대한민국 정부박람회 방문을 계획하시는 모든 분들을 위해, 가장 자주 묻는 질문들을 모아 답변해 드립니다. 본 안내를 통해 박람회 관람을 더욱 편리하고 알차게 준비하시기 바랍니다.\n박람회 기본 정보\nQ. 2024 대한민국 정부박람회는 어떤 행사인가요?\nA. 2024 대한민국 정부박람회는 정부의 혁신적인 정책과 성과를 국민과 함께 공유하고, 미래의 ‘디지털플랫폼정부’가 나아갈 방향을 제시하는 대...",
-  "timestamp": "2026-08-01T05:15:23.177Z",
+  "tool_input_preview": "{\"command\":\"whois ges.kr 2>&1 | head -15; echo =====; whois ges2026.kr 2>&1 | head -8\",\"timeout\":60000,\"description\":\"Verify ges.kr whois raw output\"}",
+  "error": "Exit code 1\n% IANA WHOIS server\n% for more information on IANA, visit http://www.iana.org\n% This query returned 1 object\n\nrefer:        whois.kr\n\ndomain:       KR\n\norganisation: Korea Internet & Security Agency (KISA)\naddress:      9, Jinheung-gil\naddress:      Naju-si Jeollanam-do 58324\naddress:      Korea (the Republic of)\n\ncontact:      administrative\nname:         Kilnam Chon\n(eval):1: ==== not found",
+  "timestamp": "2026-08-01T08:51:06.612Z",
   "retry_count": 1
 }

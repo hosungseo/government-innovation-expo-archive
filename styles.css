@@ -267,30 +267,6 @@ h1 em {
   font-variant-numeric: tabular-nums;
 }
 
-.title-lockup {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  align-items: start;
-  gap: 16px;
-}
-
-.section-index {
-  display: inline-flex;
-  height: 32px;
-  align-items: center;
-  justify-content: center;
-  border-top: 2px solid currentColor;
-  color: var(--brand-primary);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-
-.title-lockup-inverse .section-index {
-  color: var(--brand-secondary);
-}
-
 .section-heading h2,
 .schedule-intro h2,
 .contact h2 {
@@ -459,11 +435,6 @@ h1 em {
     top: 64px;
   }
 
-  .title-lockup {
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 12px;
-  }
-
   .example-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -509,23 +480,6 @@ h1 em {
   .hero-text-link {
     justify-content: space-between;
     padding: 0 4px;
-  }
-
-  .title-lockup {
-    grid-template-columns: 32px minmax(0, 1fr);
-    gap: 10px;
-  }
-
-  .split-heading > p {
-    margin-left: 42px;
-  }
-
-  .archive-top .text-link {
-    margin-left: 42px;
-  }
-
-  .section-index {
-    font-size: 11px;
   }
 
   .example-card.card-a,
