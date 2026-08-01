@@ -546,3 +546,14 @@ h1 em {
   .archive-record-actions,
   .archive-verified { grid-column: 1; }
 }
+
+/* Archive record photos (official KOGL-licensed event photos) */
+.archive-record article:has(.archive-photo) { grid-template-columns: 130px 1fr 232px; gap: 2px 36px; }
+.archive-photo { grid-column: 3; grid-row: 1 / span 5; align-self: start; margin: 6px 0 0; }
+.archive-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); }
+.archive-photo figcaption { margin-top: 8px; color: #8394a8; font-size: 12px; line-height: 1.5; }
+
+@media (max-width: 840px) {
+  .archive-record article:has(.archive-photo) { grid-template-columns: 1fr; }
+  .archive-photo { grid-column: 1; grid-row: auto; max-width: 420px; margin-top: 14px; }
+}
