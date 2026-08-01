@@ -4,7 +4,8 @@
 
 ## 공개 페이지
 
-https://hosungseo.github.io/government-innovation-expo-archive/
+- GitHub Pages: https://hosungseo.github.io/government-innovation-expo-archive/
+- Vercel: https://government-innovation-expo-archive.vercel.app (GitHub main 푸시 시 자동 배포)
 
 ## 실행
 
