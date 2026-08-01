@@ -65,3 +65,7 @@ KRDS(대한민국 정부 디자인시스템, v04.krds.go.kr) 핵심 요소를 �
 - **서체**: Pretendard GOV (KRDS 공식 서체). KRDS-uiux/krds-uiux 저장소의 공식 서브셋 woff2(Regular 400·Medium 500·Bold 700)를 `fonts/`에 셀프호스팅 — 외부 CDN 호출 없음.
 - **색상**: 파랑·네이비 primitive를 KRDS light primary 토큰에 정렬 — navy-950→primary-90(#03163a), navy-900→primary-80(#052561), blue-700→primary-60(#0b50d0), blue-100→primary-5(#ecf2fe), sky-300→primary-30(#86aff9). 라임 액션 컬러와 슬레이트 텍스트는 사이트 고유 아이덴티티로 유지. oklch 재정의 블록에서 파랑 계열은 제거(정확한 KRDS hex 유지 목적).
 - **공식 배너 제외**: KRDS 공식 배너(태극기+공식 누리집 표기)는 .go.kr 공식 누리집 전용이므로 github.io 페이지에는 적용하지 않고, 마스트헤드 문구도 안내 페이지임을 밝히는 문구로 조정.
+
+### 액센트 변경 (2026-08-01)
+
+라임 액션 컬러를 KRDS Primary-30(#86aff9, hover Primary-20 #b1cefb)으로 교체해 남색·파랑 모노톤으로 통일. 사례 카드 심볼의 라임 계열과 파비콘 막대도 함께 정렬. `--lime` 별칭은 하위 호환용으로 유지하되 이제 하늘빛을 가리킨다.

@@ -28,8 +28,7 @@
   --primitive-blue-700: #0b50d0; /* krds primary-60 */
   --primitive-blue-100: #ecf2fe; /* krds primary-5 */
   --primitive-sky-300: #86aff9;  /* krds primary-30 */
-  --primitive-lime-400: #c4e84d;
-  --primitive-lime-300: #d1ef62;
+  --primitive-sky-200: #b1cefb;  /* krds primary-20 */
   --primitive-paper: #fbfcfd;
   --primitive-white: #ffffff;
   --primitive-slate-900: #111f36;
@@ -52,8 +51,8 @@
   --border-strong: var(--primitive-slate-900);
   --brand-primary: var(--primitive-blue-700);
   --brand-secondary: var(--primitive-sky-300);
-  --action-primary: var(--primitive-lime-400);
-  --action-primary-hover: var(--primitive-lime-300);
+  --action-primary: var(--primitive-sky-300);
+  --action-primary-hover: var(--primitive-sky-200);
   --focus-ring: var(--primitive-focus);
 
   /* Typography */
@@ -93,8 +92,6 @@
 @supports (color: oklch(50% 0.1 200)) {
   :root {
     /* Blue/navy primitives stay on exact KRDS hex values — no oklch override */
-    --primitive-lime-400: oklch(87% 0.16 118);
-    --primitive-lime-300: oklch(90% 0.15 118);
     --primitive-paper: oklch(99% 0.003 255);
     --primitive-slate-900: oklch(28% 0.045 258);
     --primitive-slate-600: oklch(50% 0.035 255);
