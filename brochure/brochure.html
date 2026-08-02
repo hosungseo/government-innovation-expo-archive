@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026 대한민국 정부혁신박람회 — 기업 참여 안내</title>
+<style>
+  @font-face { font-family: "Pretendard GOV"; src: url("../fonts/PretendardGOV-Regular.subset.woff2") format("woff2"); font-weight: 400; }
+  @font-face { font-family: "Pretendard GOV"; src: url("../fonts/PretendardGOV-Medium.subset.woff2") format("woff2"); font-weight: 500; }
+  @font-face { font-family: "Pretendard GOV"; src: url("../fonts/PretendardGOV-Bold.subset.woff2") format("woff2"); font-weight: 700; }
+
+  :root {
+    --navy-90: #03163a; --navy-80: #052561; --blue-60: #0b50d0;
+    --sky-30: #86aff9; --sky-20: #b1cefb; --sky-5: #ecf2fe;
+    --ink: #111f36; --muted: #58667b; --line: #dce3ed; --paper: #fff;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #e8ebf1; }
+  body { font-family: "Pretendard GOV", Pretendard, "Noto Sans KR", sans-serif; color: var(--ink); letter-spacing: -0.035em; word-break: keep-all; }
+  @page { size: A4; margin: 0; }
+  .page { position: relative; width: 210mm; height: 297mm; margin: 0 auto; background: var(--paper); overflow: hidden; page-break-after: always; }
+  @media screen { .page { margin: 16px auto; box-shadow: 0 4px 24px #0002; } }
+
+  /* ---------- PAGE 1 ---------- */
+  .p1-hero { position: relative; height: 118mm; background: var(--navy-80); color: #fff; padding: 16mm 14mm 0; }
+  .p1-masthead { display: flex; justify-content: space-between; align-items: center; font-size: 8.5pt; color: #b9d0ff; padding-bottom: 5mm; border-bottom: 1px solid #ffffff2c; }
+  .p1-masthead b { letter-spacing: .06em; }
+  .p1-title { margin-top: 11mm; }
+  .p1-title .kicker { display: inline-block; padding: 2mm 3.5mm; background: var(--sky-30); color: #03163a; font-size: 10pt; font-weight: 700; }
+  .p1-title h1 { margin-top: 6mm; font-size: 33pt; line-height: 1.22; font-weight: 700; letter-spacing: -.05em; }
+  .p1-title h1 em { font-style: normal; color: var(--sky-30); }
+  .p1-title p { margin-top: 5mm; font-size: 11.5pt; line-height: 1.6; color: #dfe8f6; }
+  .p1-facts { position: absolute; left: 14mm; right: 14mm; bottom: 0; transform: translateY(50%); display: grid; grid-template-columns: 1.2fr 1fr 1fr; background: var(--navy-90); border: 1px solid #adc6ff5e; }
+  .p1-facts div { padding: 5.5mm 6mm; border-right: 1px solid #ffffff22; }
+  .p1-facts div:last-child { border-right: 0; }
+  .p1-facts span { display: block; font-size: 8pt; color: #abc0e7; margin-bottom: 1.6mm; }
+  .p1-facts strong { font-size: 11.5pt; color: #fff; font-variant-numeric: tabular-nums; }
+  .p1-photos { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 1mm; padding: 21mm 14mm 0; }
+  .p1-photos img { width: 100%; height: 42mm; object-fit: cover; display: block; }
+  .p1-caption { padding: 2.5mm 14mm 0; font-size: 7.5pt; color: #8394a8; text-align: right; }
+  .p1-why { padding: 8mm 14mm 0; }
+  .rule { width: 12mm; height: 1.2mm; background: var(--blue-60); margin-bottom: 4mm; }
+  .p1-why h2, .p2 h2 { font-size: 16.5pt; font-weight: 700; letter-spacing: -.04em; margin-bottom: 4.5mm; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1.5pt solid var(--ink); }
+  .stats div { padding: 4.5mm 5mm 4.5mm 0; border-right: 1px solid var(--line); }
+  .stats div + div { padding-left: 5mm; }
+  .stats div:last-child { border-right: 0; }
+  .stats strong { display: block; font-size: 19pt; color: var(--blue-60); font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+  .stats span { display: block; margin-top: 1.5mm; font-size: 9pt; color: var(--muted); line-height: 1.45; }
+  .p1-note { margin: 6mm 14mm 0; padding: 4mm 5mm; background: var(--sky-5); border: 1px solid #cbd8ea; font-size: 9pt; color: #31517a; line-height: 1.55; }
+
+  /* ---------- PAGE 2 ---------- */
+  .p2 { padding: 14mm; }
+  .steps { counter-reset: step; border-top: 1.5pt solid var(--ink); }
+  .step { display: grid; grid-template-columns: 26mm 34mm 1fr; gap: 0 6mm; padding: 5mm 0; border-bottom: 1px solid var(--line); }
+  .step::before { counter-increment: step; content: counter(step, decimal-leading-zero); font-size: 15pt; font-weight: 700; color: var(--sky-30); font-variant-numeric: tabular-nums; }
+  .step h3 { font-size: 12pt; font-weight: 700; }
+  .step p { font-size: 9.5pt; color: var(--muted); line-height: 1.55; }
+  .p2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin-top: 9mm; }
+  .history { border-top: 1.5pt solid var(--ink); }
+  .history li { display: grid; grid-template-columns: 16mm 1fr; gap: 4mm; padding: 3.2mm 0; border-bottom: 1px solid var(--line); list-style: none; font-size: 9pt; }
+  .history b { color: var(--blue-60); font-variant-numeric: tabular-nums; font-size: 10.5pt; }
+  .history span { color: var(--muted); line-height: 1.45; }
+  .types { border-top: 1.5pt solid var(--ink); }
+  .types li { padding: 3.2mm 0; border-bottom: 1px solid var(--line); list-style: none; font-size: 9.5pt; line-height: 1.5; }
+  .types b { display: block; font-size: 10.5pt; }
+  .types span { color: var(--muted); }
+  .p2-photo { margin-top: 9mm; }
+  .p2-photo img { width: 100%; height: 52mm; object-fit: cover; display: block; }
+  .p2-photo figcaption { margin-top: 2mm; font-size: 7.5pt; color: #8394a8; text-align: right; }
+  .p2-contact { position: absolute; left: 0; right: 0; bottom: 0; background: var(--navy-80); color: #fff; padding: 8mm 14mm; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8mm; }
+  .p2-contact h3 { font-size: 13pt; font-weight: 700; margin-bottom: 2mm; }
+  .p2-contact p { font-size: 9pt; color: #cfdcf5; line-height: 1.55; }
+  .p2-contact .cta { text-align: right; }
+  .p2-contact .cta b { display: block; font-size: 12.5pt; color: var(--sky-30); }
+  .p2-contact .cta span { display: block; margin-top: 1.5mm; font-size: 8.5pt; color: #abc0e7; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="p1-hero">
+    <div class="p1-masthead">
+      <b>MINISTRY OF THE INTERIOR AND SAFETY</b>
+      <span>기업 참여 안내</span>
+    </div>
+    <div class="p1-title">
+      <span class="kicker">2026 대한민국 정부혁신박람회</span>
+      <h1>귀사의 기술이<br>정부혁신의 <em>현장</em>이 됩니다</h1>
+      <p>행정안전부가 주최하는 대한민국 대표 정부혁신 행사에서<br>공공시장의 고객을 직접 만나보세요.</p>
+    </div>
+    <div class="p1-facts">
+      <div><span>일시</span><strong>2026. 11. 25.(수) — 27.(금)</strong></div>
+      <div><span>장소</span><strong>경기도 고양 킨텍스</strong></div>
+      <div><span>주최</span><strong>행정안전부</strong></div>
+    </div>
+  </div>
+  <div class="p1-photos">
+    <img src="../photos/expo-2025-1.jpg" alt="2025 박람회 개막식">
+    <img src="../photos/expo-2025-4.jpg" alt="기업 부스 참관">
+    <img src="../photos/expo-2025-3.jpg" alt="전시 부스 관람">
+  </div>
+  <p class="p1-caption">2025 대한민국 정부혁신 박람회(청주 오스코) 현장 · 사진: 행정안전부</p>
+  <div class="p1-why">
+    <div class="rule"></div>
+    <h2>기업이 참여해야 하는 이유</h2>
+    <div class="stats">
+      <div><strong>68개사</strong><span>2025년 참여 민간기업 — 전체 157개 기관의 43%</span></div>
+      <div><strong>24부스</strong><span>AI 혁신기업 전용 전시 구역 별도 운영 (2025)</span></div>
+      <div><strong>7회째</strong><span>2019년 첫 회 이후 정부혁신을 대표해 온 행사</span></div>
+    </div>
+  </div>
+  <p class="p1-note">중앙부처·지방정부·공공기관의 정책 담당자와 일반 관람객이 한 자리에 모입니다. 공공 서비스를 혁신한 기술을 가진 기업이라면, 조달·협업의 접점을 이곳에서 만들 수 있습니다.</p>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page p2">
+  <div class="rule"></div>
+  <h2>참여 절차 — 세 단계면 충분합니다</h2>
+  <div class="steps">
+    <div class="step"><h3>공고 확인</h3><p>기업 참여는 운영사무국·유관기관의 공개 모집으로 진행됩니다. 모집 공고는 행정안전부 누리집 공지와 보도자료로 안내됩니다. 2026년 공고는 확정되는 대로 안내 페이지에 게시됩니다.</p></div>
+    <div class="step"><h3>콘텐츠 제안</h3><p>AI·데이터·클라우드처럼 공공 서비스를 바꾼 기술과 사례를 신청서에 담아 제출합니다. 기술 자체보다 "국민에게 무엇이 달라졌는가"를 보여주는 콘텐츠가 선정에 유리합니다.</p></div>
+    <div class="step"><h3>부스 전시</h3><p>선정 기업은 부스를 배정받아 관람객과 만납니다. 체험·시연 프로그램을 함께 준비할 수 있으며, 예년 기준 기본부스(공간+기본집기)와 독립부스(자체 시공) 유형이 운영되었습니다.</p></div>
+  </div>
+
+  <div class="p2-grid">
+    <div>
+      <div class="rule"></div>
+      <h2>역대 개최</h2>
+      <ul class="history">
+        <li><b>2025</b><span>청주 오스코 — AI×정부혁신, 157개 기관·민간기업 68개사</span></li>
+        <li><b>2024</b><span>광주 김대중컨벤션센터 — 131개 기관, 디지털플랫폼정부 공동 주최</span></li>
+        <li><b>2023</b><span>부산 벡스코 — 99개 기관, 93개 혁신사례</span></li>
+        <li><b>2021</b><span>온라인 + 서울 DDP — 81개 혁신정책, 메타버스 전시</span></li>
+        <li><b>2020</b><span>온라인 개최 — 79개 기관, 약 160만 명 관람</span></li>
+        <li><b>2019</b><span>서울 DDP — 제1회, 80개 기관·59개 혁신정책</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rule"></div>
+      <h2>참여 유형 (예년 기준)</h2>
+      <ul class="types">
+        <li><b>전시 부스</b><span>기본부스·독립부스 — 기술과 서비스를 전시</span></li>
+        <li><b>체험·시연</b><span>관람객이 직접 사용해 보는 인터랙티브 프로그램</span></li>
+        <li><b>전용 구역</b><span>AI 혁신기업 구역 등 민간기업 특화 전시 공간</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="p2-photo">
+    <img src="../photos/expo-2023-3.jpg" alt="전시 부스를 관람하는 시민들">
+    <figcaption>전시 부스를 찾은 관람객들(2023 부산) · 사진: 행정안전부</figcaption>
+  </figure>
+
+  <div class="p2-contact">
+    <div>
+      <h3>지금, 준비를 시작하세요</h3>
+      <p>참여 안내 페이지에서 역대 개최 기록과 참여 기준을 확인하실 수 있습니다.<br>2026년 기업 모집 공고도 이 페이지에서 가장 먼저 안내합니다.</p>
+    </div>
+    <div class="cta">
+      <b>tigercastle@korea.kr</b>
+      <span>government-innovation-expo-archive.vercel.app</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
