@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"whois ges.kr 2>&1 | head -15; echo =====; whois ges2026.kr 2>&1 | head -8\",\"timeout\":60000,\"description\":\"Verify ges.kr whois raw output\"}",
-  "error": "Exit code 1\n% IANA WHOIS server\n% for more information on IANA, visit http://www.iana.org\n% This query returned 1 object\n\nrefer:        whois.kr\n\ndomain:       KR\n\norganisation: Korea Internet & Security Agency (KISA)\naddress:      9, Jinheung-gil\naddress:      Naju-si Jeollanam-do 58324\naddress:      Korea (the Republic of)\n\ncontact:      administrative\nname:         Kilnam Chon\n(eval):1: ==== not found",
-  "timestamp": "2026-08-01T08:51:06.612Z",
+  "tool_input_preview": "{\"command\":\"grep -n \\\"channelIds\\\\|ministries\\\\|import\\\\|CHANNELS\\\" /Users/seohoseong/gov-onair/poller/poll.mjs | head -10; echo ===POLLER===; for h in ppskorea pps_korea koreapps 조달청pps; do echo \\\"==...",
+  "error": "Exit code 1\n16:import { readFileSync, writeFileSync, appendFileSync, existsSync, mkdirSync } from \"node:fs\";\n17:import { fileURLToPath } from \"node:url\";\n18:import path from \"node:path\";\n20:const DIR = path.dirname(fileURLToPath(import.meta.url));\n82:  const { list } = await import(\"@vercel/blob\");\n95:  const { put } = await import(\"@vercel/blob\");\n(eval):1: ==POLLER=== not found",
+  "timestamp": "2026-08-01T22:13:14.210Z",
   "retry_count": 1
 }

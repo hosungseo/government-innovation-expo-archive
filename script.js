@@ -254,3 +254,59 @@
     items.forEach((item) => item.classList.add('is-visible'));
   }
 })();
+
+/* Vanilla ports of component-library motion (split text, number ticker, timeline draw) */
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const heroTitle = document.querySelector('#hero-title');
+  if (heroTitle && !reduceMotion) {
+    let charIndex = 0;
+    heroTitle.querySelectorAll('span, em').forEach((part) => {
+      const chars = [...part.textContent];
+      part.textContent = '';
+      chars.forEach((ch) => {
+        const piece = document.createElement('i');
+        piece.className = 'split-char';
+        piece.style.setProperty('--i', charIndex++);
+        piece.textContent = ch;
+        part.appendChild(piece);
+      });
+    });
+    heroTitle.classList.add('split-ready');
+  }
+
+  const ticks = document.querySelectorAll('[data-tick]');
+  if (ticks.length && 'IntersectionObserver' in window && !reduceMotion) {
+    const run = (el) => {
+      const target = Number(el.dataset.tick);
+      const started = performance.now();
+      const duration = 1100;
+      const frame = (now) => {
+        const t = Math.min((now - started) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = String(Math.round(target * eased));
+        if (t < 1) requestAnimationFrame(frame);
+      };
+      requestAnimationFrame(frame);
+    };
+    const tickObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { run(entry.target); tickObserver.unobserve(entry.target); }
+      });
+    }, { threshold: 0.6 });
+    ticks.forEach((el) => tickObserver.observe(el));
+  }
+
+  const timeline = document.querySelector('.timeline');
+  if (timeline && 'IntersectionObserver' in window && !reduceMotion) {
+    const lineObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) { timeline.classList.add('is-drawn'); lineObserver.disconnect(); }
+      });
+    }, { threshold: 0.4 });
+    lineObserver.observe(timeline);
+  } else if (timeline) {
+    timeline.classList.add('is-drawn');
+  }
+})();
