@@ -34,8 +34,9 @@
   .p1-facts div:last-child { border-right: 0; }
   .p1-facts span { display: block; font-size: 8pt; color: #abc0e7; margin-bottom: 1.6mm; }
   .p1-facts strong { font-size: 11.5pt; color: #fff; font-variant-numeric: tabular-nums; }
+  
   .p1-photos { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 1mm; padding: 21mm 14mm 0; }
-  .p1-photos img { width: 100%; height: 42mm; object-fit: cover; display: block; }
+  .p1-photos img { width: 100%; height: 44mm; object-fit: cover; display: block; }
   .p1-caption { padding: 2.5mm 14mm 0; font-size: 7.5pt; color: #8394a8; text-align: right; }
   .p1-why { padding: 8mm 14mm 0; }
   .rule { width: 12mm; height: 1.2mm; background: var(--blue-60); margin-bottom: 4mm; }
@@ -67,7 +68,10 @@
   .p2-photo { margin-top: 9mm; }
   .p2-photo img { width: 100%; height: 52mm; object-fit: cover; display: block; }
   .p2-photo figcaption { margin-top: 2mm; font-size: 7.5pt; color: #8394a8; text-align: right; }
-  .p2-contact { position: absolute; left: 0; right: 0; bottom: 0; background: var(--navy-80); color: #fff; padding: 8mm 14mm; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8mm; }
+  .p2-contact { position: absolute; left: 0; right: 0; bottom: 0; background: var(--navy-80); color: #fff; padding: 8mm 14mm; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 8mm; }
+  .p2-contact .qr { display: block; width: 21mm; height: 21mm; padding: 1.6mm; background: #fff; }
+  .p2-contact .qr-cell { text-align: center; }
+  .p2-contact .qr-cell small { display: block; margin-top: 1.6mm; font-size: 7pt; color: #abc0e7; }
   .p2-contact h3 { font-size: 13pt; font-weight: 700; margin-bottom: 2mm; }
   .p2-contact p { font-size: 9pt; color: #cfdcf5; line-height: 1.55; }
   .p2-contact .cta { text-align: right; }
@@ -110,7 +114,7 @@
       <div><strong>7회째</strong><span>2019년 첫 회 이후 정부혁신을 대표해 온 행사</span></div>
     </div>
   </div>
-  <p class="p1-note">중앙부처·지방정부·공공기관의 정책 담당자와 일반 관람객이 한 자리에 모입니다. 공공 서비스를 혁신한 기술을 가진 기업이라면, 조달·협업의 접점을 이곳에서 만들 수 있습니다.</p>
+  <p class="p1-note">중앙부처·지방정부·공공기관의 정책 담당자와 일반 관람객이 한 자리에 모입니다. 2025년에는 <b>삼성SDS·LG CNS·네이버클라우드·한글과컴퓨터·업스테이지</b> 등 68개 기업이 함께했습니다. 공공 서비스를 혁신한 기술이 있다면, 조달·협업의 접점을 이곳에서 만들 수 있습니다.</p>
 </section>
 
 <!-- PAGE 2 -->
@@ -160,6 +164,10 @@
     <div class="cta">
       <b>tigercastle@korea.kr</b>
       <span>government-innovation-expo-archive.vercel.app</span>
+    </div>
+    <div class="qr-cell">
+      <img class="qr" src="qr.svg" alt="참여 안내 페이지 QR 코드">
+      <small>QR로 안내 페이지 열기</small>
     </div>
   </div>
 </section>

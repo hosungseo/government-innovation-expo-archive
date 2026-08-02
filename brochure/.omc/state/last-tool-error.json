@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git add brochure && git commit -q -m \\\"feat: brochure v2 — QR code, asymmetric photo band, named 2025 exhibitors\\n\\nContact block gains a QR to the info page, page-1 photos follow the\\nsit...",
+  "error": "Exit code 128\nfatal: pathspec 'brochure' did not match any files",
+  "timestamp": "2026-08-02T08:06:14.128Z",
+  "retry_count": 1
+}
