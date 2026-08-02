@@ -310,3 +310,32 @@
     timeline.classList.add('is-drawn');
   }
 })();
+
+/* Mobile sticky deadline bar: mirrors the deadline card state, shows after the hero */
+(() => {
+  const bar = document.querySelector('#mobile-cta');
+  const barText = document.querySelector('#mobile-cta-text');
+  const hero = document.querySelector('.hero');
+  const card = document.querySelector('[data-deadline-start][data-deadline-end]');
+  if (!bar || !barText || !hero || !card || !('IntersectionObserver' in window)) return;
+
+  const dayMs = 86400000;
+  const kstMs = 9 * 60 * 60 * 1000;
+  const toDay = (iso) => { const [y, m, d] = iso.split('-').map(Number); return Math.floor((Date.UTC(y, m - 1, d) + kstMs) / dayMs); };
+  const today = Math.floor((Date.now() + kstMs) / dayMs);
+  const startDay = toDay(card.dataset.deadlineStart);
+  const endDay = toDay(card.dataset.deadlineEnd);
+
+  if (today < startDay) barText.textContent = `수요조사 시작 D-${startDay - today}`;
+  else if (today < endDay) barText.textContent = `수요조사 마감 D-${endDay - today}`;
+  else if (today === endDay) barText.textContent = '수요조사 오늘 마감';
+  else barText.textContent = '수요조사 마감 · 다음 안내를 기다려 주세요';
+
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      bar.hidden = entry.isIntersecting;
+      bar.classList.toggle('is-shown', !entry.isIntersecting);
+    });
+  }, { rootMargin: '-80px 0px 0px 0px' });
+  barObserver.observe(hero);
+})();

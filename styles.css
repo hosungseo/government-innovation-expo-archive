@@ -548,12 +548,13 @@ h1 em {
 }
 
 /* Archive record photo strips (official MOIS event photos) */
-.archive-photos { display: grid; grid-column: 2; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 18px 0 0; }
+.archive-photos { grid-column: 2; margin: 18px 0 0; }
+.archive-photo-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .archive-photos img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--line); }
-.archive-photos figcaption { grid-column: 1 / -1; margin-top: 2px; color: #8394a8; font-size: 12px; line-height: 1.5; }
+.archive-photos figcaption { margin-top: 8px; color: #8394a8; font-size: 12px; line-height: 1.5; }
 
 @media (max-width: 840px) {
-  .archive-photos { grid-column: 1; grid-template-columns: 1fr 1fr; }
+  .archive-photos { grid-column: 1; }
 }
 
 /* Hero: last year's on-site photo band — asymmetric editorial strip */
@@ -666,4 +667,26 @@ h1 em {
   #archive-search { min-height: 46px; }
   .archive-clear { min-width: 60px; min-height: 46px; }
   .deadline-card > a { padding: 12px 0; margin: -12px 0; }
+}
+
+/* Mobile reinforcements (2026-08-02) */
+.mobile-cta { display: none; }
+@media (max-width: 840px) {
+  .mobile-cta { position: fixed; z-index: 20; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 54px; padding: 8px 18px calc(8px + env(safe-area-inset-bottom)); background: #03163af2; color: #fff; transform: translateY(100%); transition: transform .28s var(--ease-out); }
+  .mobile-cta.is-shown { transform: none; }
+  .mobile-cta[hidden] { display: flex; }
+  .mobile-cta p { margin: 0; font-size: 14px; font-weight: 700; color: var(--sky); font-variant-numeric: tabular-nums; }
+  .mobile-cta a { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; background: var(--lime); color: #002e4d; font-size: 13.5px; font-weight: 700; }
+  body { padding-bottom: 54px; }
+
+  /* Archive records stack on mobile (re-assert over the late spine rules) */
+  .archive-record article { grid-template-columns: 1fr; }
+
+  /* Archive photo strips become swipeable rows */
+  .archive-photo-row { display: flex; overflow-x: auto; gap: 8px; scroll-snap-type: x mandatory; -ms-overflow-style: none; scrollbar-width: none; }
+  .archive-photo-row::-webkit-scrollbar { display: none; }
+  .archive-photo-row img { flex: 0 0 74%; min-width: 0; max-width: 300px; scroll-snap-align: start; }
+}
+@media (max-width: 840px) and (prefers-reduced-motion: reduce) {
+  .mobile-cta { transition: none; }
 }
